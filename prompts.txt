@@ -1,0 +1,48 @@
+TASK 2: 
+============
+How many open issues do I have in my plane instance?  
+
+TASK 3: cd /root/k8s-incident 
+=================
+Use the kubernetes-specialist agent to investigate and resolve pod failures.
+- Analyze the pods in the default namespace for CrashLoopBackOff issues, resource constraints, and configuration errors. Pod manifest files can be found at '/root/k8s-incident'.
+- Apply the necessary fixes and ensure all the containers within a pod are restored to Running state after remediation.
+- Perform root cause analysis (RCA) and document findings.
+- Save the detailed incident report to /root/k8s-incident/incident-report.md.
+
+
+Task 4: cd /root/terraform-static-site 
+==================================
+
+Use the cloud-architect agent to:
+
+- Analyze the Terraform project in /root/terraform-static-site/ for infrastructure drift.
+- Detect unmanaged or drifted resources and identify differences between Terraform state, configuration, and actual infrastructure.
+- Reconcile the drift by executing the correct Terraform commands that bring the project back in sync.
+- Generate a detailed Root Cause Analysis (RCA) report that explains:
+  - What drift was detected
+  - The probable causes
+  - The corrective actions taken
+  - Recommendations for preventing future drift
+
+Save this RCA report as /root/terraform-static-site/terraform-drift-rca.md.
+
+
+Task 5-1: Update Plane Tickets
+==================================
+
+Update the Plane tickets with relevant comments. Specifically:
+
+- Summarize the incident details from /root/k8s-incident/incident-report.md and add a comment stating that the Kubernetes pod crashes have been resolved.
+- Summarize the root cause analysis from /root/terraform-static-site/terraform-drift-rca.md and add a comment stating that the infrastructure drift has been corrected.
+
+Ensure the comments are concise, professional, and suitable for updating tickets in Plane.
+
+
+Task 5-2: Create executive summary from incident report
+==================================
+
+# Create comprehensive incident report
+cat /root/k8s-incident/incident-report.md > /root/executive-summary.md
+echo -e "\n---\n" >> /root/executive-summary.md
+cat /root/terraform-static-site/terraform-drift-rca.md >> /root/executive-summary.md
