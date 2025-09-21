@@ -32,3 +32,6 @@ dist/
 .terminal_logs/
 .git-credentials
 *.credentials
+terra*/*
+.terra*
+.terra*/*
