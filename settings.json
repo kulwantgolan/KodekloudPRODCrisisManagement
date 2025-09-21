@@ -1,0 +1,26 @@
+{
+    "theme": "Qwen Dark",
+    "selectedAuthType": "openai",
+    "mcpServers": {
+        "kubernetes": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "kubernetes-mcp-server@latest"
+            ]
+        },
+        "plane-mcp": {
+            "command": "npx",
+            "args": [
+                "-y",
+                "@modelcontextprotocol/server-plane"
+            ],
+            "env": {
+                "PLANE_API_URL": "http://planeserver/api",
+                "PLANE_API_TOKEN": "plane_api_69f3d97fc1ad41a884e62f07e0bfcc18"
+            }
+        }
+    },
+    "hasSeenIdeIntegrationNudge": true,
+    "ideMode": true
+}

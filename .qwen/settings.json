@@ -1,0 +1,22 @@
+{
+  "selectedAuthType": "openai",
+  "autoAccept": true,
+  "hideBanner": true,
+  "theme": "Qwen Dark",
+  "hasSeenIdeIntegrationNudge": true,
+  "ideMode": true,
+  "mcpServers": {
+    "plane": {
+       "command": "npx",
+      "args": [
+        "-y",
+        "@makeplane/plane-mcp-server"
+      ],
+      "env": {
+        "PLANE_API_KEY": "plane_api_b067fc151e6b46a9a8cf9a48ede85e79",
+        "PLANE_API_HOST_URL": "http://planeserver",
+        "PLANE_WORKSPACE_SLUG": "kodekloud-workspace"
+      }
+    }
+  }
+}
