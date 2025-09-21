@@ -4,6 +4,7 @@ data:
   start.sh: |-
     #!/bin/sh
     echo "Running script"
+    sleep infinity
 kind: ConfigMap
 metadata:
   name: startup-script
@@ -17,7 +18,7 @@ spec:
   containers:
     - name: app
       image: alpine:3.19
-      command: ["/scripts/start.sh"]
+      command: ["sh", "-c", "echo 'Running script' && sleep infinity"]
       volumeMounts:
         - name: script-vol
           mountPath: /scripts
